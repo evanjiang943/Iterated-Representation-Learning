@@ -1,0 +1,46 @@
+I"C<h2 id="project-proposal-overview">Project Proposal Overview</h2>
+
+<p>Welcome to our project proposal! Below is an overview of how what we’re interested in and how we plan on structuring it, as well as some questions we hope to get some advice on.</p>
+
+<h3 id="asdf">asdf</h3>
+
+<ol>
+  <li>Background
+    <ul>
+      <li>Representation primer</li>
+      <li>
+        <ul>
+          <li>What is representation?
+Why is it important to learn well (properties of good representations and its utility)?
+Autoencoder primer
+What is an autoencoder (AE) and how does it relate to representation?</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<p>Iterated Representation Learning Framework
+AEs (deterministic reconstruction)
+Step 1: Given some dataset, use an AE to learn its embedding space.
+Step 2: Using the learned embedding and AE, reconstruct the original dataset and compute the reconstruction loss.
+Step 3: Using the reconstructed dataset, repeat Steps 1 and 2, iterating as long as desired.
+VAEs (generative modeling)
+Step 1: Given some dataset, use a VAE to learn its embedding space.
+Step 2: Using the learned embedding and VAE, generate a new dataset.
+Step 3: Using the newly generated dataset, repeat Steps 1 and 2, iterating as long as desired.</p>
+
+<p>Potential Questions / Hypotheses
+Following the iterated representation learning framework above, can we iterate until we reach some kind of convergence with respect to the model and/or learned embedding space? 
+If so, can this tell us any properties of the representation space, learned representation, model, and/or data? 
+Does the number of iterations until convergence have anything to do with how “good” or stable the model or learned representation is?
+In the deterministic autoencoder case, how do the reconstruction losses perform as iterations go on? Do we converge? How quickly? If the loss seems to diverge (relative to the original data), does it diverge linearly, exponentially, etc.?
+What can we say about characteristics of the data that are maintained through iterations, and characteristics that evolve as the iterations go on? For example, if we observe that a model remains invariant to a certain feature, but becomes sensitive to new features of the data, what does this tell us about these particular features, our model, and the original data itself? Are there any other patterns we can identify along these lines?
+Can we propose some sort of representation learning evaluation framework using iterated representation learning, e.g. rough guidelines on ideal number of iterations required until convergence, and what this says about how good a model is?</p>
+
+<p>Future Work
+How can we make iterated representation learning more computationally tractable? 
+Can any of these results be generalized to other types of deep learning models?
+Are there any theoretical guarantees we can prove?</p>
+
+:ET
